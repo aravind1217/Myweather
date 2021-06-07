@@ -9,9 +9,9 @@ from django.contrib.auth.decorators import login_required
 
 @login_required
 def Homeview(request):
-
-	url = "http://api.openweathermap.org/data/2.5/weather?q={}&appid=73aec23abb201f785692e621a3b6daba"
-	
+       
+	url = "http://api.openweathermap.org/data/2.5/weather?q={}&appid=Your APi key "
+	" You can get your API key form registering here https://openweathermap.org/"
 
 	if request.method == "POST":
 		form = Cityform(request.POST)
