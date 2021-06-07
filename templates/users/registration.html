@@ -1,0 +1,39 @@
+  
+{% extends "front.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<section class="column">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <div class="column is-4 is-offset-4">
+                    <h3 class="title has-text-black">Registration Form</h3>
+                   
+                    <div class="box">
+                                       <form method="POST">
+                            {% csrf_token %}
+                            <fieldset class="form-group">
+                                <legend class="border-bottom mb-4">Join Today</legend>
+                                {{ form|crispy }}
+                            </fieldset>
+                            <div class="form-group">
+                                <button class="btn btn-outline-info" type="submit">Sign Up</button>
+                            </div>
+                        </form>
+                    </div>
+    
+                        
+                        
+                     
+                    </div>
+                    <p class="has-text-grey">
+                        <a href="../">Login</a> &nbsp;·&nbsp;
+                       
+                        
+                    </p>
+                </div>
+            </div>
+        </div>
+</section>
+    
+{% endblock content %}
